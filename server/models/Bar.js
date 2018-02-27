@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
-const userSchema = new Schema({
+const barSchema = new Schema({
   name: String,
-  usarname: String,
-  password: String,
-  email: String
+  longitude: String,
+  latitude: String
 }, {
   timestamps: {
     createdAt: 'created_at',
@@ -13,5 +12,5 @@ const userSchema = new Schema({
   }
 });
 
-const User = mongoose.model('User', userSchema);
-module.exports = User;
+const Bar = mongoose.model('Bar', barSchema);
+module.exports = Bar;

@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
-const userSchema = new Schema({
+const drinkSchema = new Schema({
   name: String,
-  usarname: String,
-  password: String,
-  email: String
+  ingredient: Array,
+  bar: String,
+  origin: String
 }, {
   timestamps: {
     createdAt: 'created_at',
@@ -13,5 +13,5 @@ const userSchema = new Schema({
   }
 });
 
-const User = mongoose.model('User', userSchema);
-module.exports = User;
+const Drink = mongoose.model('Drink', drinkSchema);
+module.exports = Drink;
