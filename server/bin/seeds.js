@@ -2,22 +2,22 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
-const User = require("../models/user");
-const Drink = require("../models/drink");
-const DrinksAtBar = require("../models/drinksAtBar");
+const User = require("../models/User");
+const Drink = require("../models/Drink");
+const DrinksInBar = require("../models/DrinksInBar");
 const Bar = require("../models/bar");
 
 mongoose.connect("mongodb://localhost/cocktails");
-var salt = bcrypt.genSaltSync(bcryptSalt);
+const salt = bcrypt.genSaltSync(bcryptSalt);
 const password = "ironhack";
-var encryptedPass = bcrypt.hashSync(password, salt);
+const encryptedPass = bcrypt.hashSync(password, salt);
 
-const boss = new User({
+const user = {
   username: "gon",
   name: "Gonzalo",
   email: "mail@mail.com",
   password: encryptedPass
-});
+};
 
 const drinks = [
   {
@@ -55,22 +55,35 @@ const bars = [
     name: "Bar Corazón",
     longitude: "40.423719",
     latitude: "-3.701422"
-  },
+  }
 ];
 
-// User.create(boss, (err, user) => {
-//   if (err) {
-//     throw err;
-//   }
-//   console.log(user);
-// });
+User.create(user, (err, user) => {
+  if (err) {
+    throw err;
+  }
+  console.log(user);
+});
 
-// Course.create(courses, (err, docs) => {
-//   if (err) {
-//     throw err;
-//   }
-//   docs.forEach(course => {
-//     console.log(course.name);
-//   });
-//   mongoose.connection.close();
-// });
+Bar.create(bars)
+  .then(bars => {
+    Drink.create(drinks, (err, docs) => {
+      if (err) {
+        throw err;
+      }
+      drinks.forEach(drinks => {
+        console.log(drinks.name);
+      });
+    });
+  })
+  .then(drinksInBars => {
+    DrinksInBars.create(drinksInBars, (err, docs) => {
+      if (err) {
+        throw err;
+      }
+      drinksInBars.forEach(drinksInBars => {
+        console.log(drinksInBars.name);
+      });
+      mongoose.connection.close();
+    });
+  });
