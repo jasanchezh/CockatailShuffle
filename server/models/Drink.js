@@ -4,8 +4,8 @@ const Schema   = mongoose.Schema;
 const drinkSchema = new Schema({
   name: String,
   ingredient: Array,
-  bar: String,
-  origin: String
+  bars: Array,
+  placeOfOrigin: String
 }, {
   timestamps: {
     createdAt: 'created_at',

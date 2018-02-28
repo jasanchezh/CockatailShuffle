@@ -12,50 +12,50 @@ var salt = bcrypt.genSaltSync(bcryptSalt);
 const password = "ironhack";
 var encryptedPass = bcrypt.hashSync(password, salt);
 
-// const boss = new User({
-//   username: "theboss",
-//   name: "Gonzalo",
-//   familyName: "M.",
-//   password: encryptedPass,
-//   role: "Boss"
-// });
-// const courses = [
-//   {
-//     name: "Introduction to Ruby on Rails",
-//     startingDate: new Date("2017-03-01"),
-//     endDate: new Date("2017-04-01"),
-//     level: "Beginner",
-//     available: true
-//   },
-//   {
-//     name: "Ruby on Rails Advanced",
-//     startingDate: new Date("2017-02-01"),
-//     endDate: new Date("2017-03-27"),
-//     level: "Advanced",
-//     available: true
-//   },
-//   {
-//     name: "Angular 2",
-//     startingDate: new Date("2017-04-15"),
-//     endDate: new Date("2017-06-30"),
-//     level: "Advanced",
-//     available: true
-//   },
-//   {
-//     name: "MongoDB",
-//     startingDate: new Date("2017-04-04"),
-//     endDate: new Date("2017-05-04"),
-//     level: "Advanced",
-//     available: true
-//   },
-//   {
-//     name: "Express Introduction",
-//     startingDate: new Date("2017-03-01"),
-//     endDate: new Date("2017-04-01"),
-//     level: "Beginner",
-//     available: true
-//   }
-// ];
+const boss = new User({
+  username: "gon",
+  name: "Gonzalo",
+  email: "mail@mail.com",
+  password: encryptedPass
+});
+const drinks = [
+  {
+    name: "Bloody Mary",
+    ingredients: ["vodka", "tomato juice", "slice of lemon", "tabasco"],
+    bars: ["Cock", "Corazón", "De Diego"],
+    placeOfOrigin: "USA"
+  },
+  {
+    name: "Negroni",
+    ingredients: ["gin", "martini rosso", "campari", "slice of orange"],
+    bars: ["Cock", "Corazón", "De Diego"],
+    placeOfOrigin: "Italy"
+  },
+  {
+    name: "Dry Martini",
+    ingredients: ["gin", "vermouth", "twist of lemon", "an olive"],
+    bars: ["Cock", "Corazón", "De Diego"],
+    placeOfOrigin: "USA"
+  }
+];
+
+const bars = [
+  {
+    name: "Cock",
+    longitude: "40.420142",
+    latitude: "-3.698842"
+  },
+  {
+    name: "De Diego",
+    longitude: "40.420243",
+    latitude: "-3.699286"
+  },
+  {
+    name: "Bar Corazón",
+    longitude: "40.423719",
+    latitude: "-3.701422"
+  },
+];
 
 // User.create(boss, (err, user) => {
 //   if (err) {
