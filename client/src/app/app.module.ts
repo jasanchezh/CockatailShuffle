@@ -5,17 +5,26 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SessionService } from '../services/session.service';
+import { RouterModule, Routes } from '@angular/router';
+import { MapComponent } from './map/map.component';
 
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home',  component: LoginFormComponent },
+  { path: 'map', component: MapComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [SessionService],
   bootstrap: [AppComponent]
