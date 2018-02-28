@@ -1,9 +1,15 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
-const drinksAtBarSchema = new Schema({
-  idBar: String, // falta que haga referencia al modelo de bar
-  idDrink: String, // falta que haga referencia al modelo de drink
+const drinksInBarSchema = new Schema({
+  idBar: {
+    type: Schema.Types.ObjectId,
+    ref: "Bar"
+  }, // hace referencia al modelo de bar
+  idDrink: {
+    type: Schema.Types.ObjectId,
+    ref: "Drink"
+  } // hace referencia al modelo de drink
   price: Number
 }, {
   timestamps: {
@@ -12,5 +18,5 @@ const drinksAtBarSchema = new Schema({
   }
 });
 
-const DrinksAtBar = mongoose.model('DrinksAtBar', drinkSchema);
-module.exports = DrinksAtBar;
+const DrinksInBar = mongoose.model('DrinksInBar', drinkInBarSchema);
+module.exports = DrinksIn Bar;

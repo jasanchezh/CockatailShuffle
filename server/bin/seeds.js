@@ -18,6 +18,7 @@ const boss = new User({
   email: "mail@mail.com",
   password: encryptedPass
 });
+
 const drinks = [
   {
     name: "Bloody Mary",
