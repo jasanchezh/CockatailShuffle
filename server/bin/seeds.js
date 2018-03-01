@@ -7,10 +7,13 @@ const Drink = require("../models/Drink");
 const DrinksInBar = require("../models/DrinksInBar");
 const Bar = require("../models/bar");
 
-mongoose.connect("mongodb://localhost/cocktails");
 const salt = bcrypt.genSaltSync(bcryptSalt);
 const password = "ironhack";
 const encryptedPass = bcrypt.hashSync(password, salt);
+
+mongoose.connect("mongodb://localhost/cocktails")
+    .then(() => console.log("Conectado"))
+    .catch(e => console.log(e));
 
 const user = {
   username: "gon",
@@ -76,14 +79,13 @@ Bar.create(bars)
       });
     });
   })
-  .then(drinksInBars => {
-    DrinksInBars.create(drinksInBars, (err, docs) => {
+  .then(drinksInBar => {
+    DrinksInBar.create(drinksInBar, (err, docs) => {
       if (err) {
         throw err;
       }
-      drinksInBars.forEach(drinksInBars => {
-        console.log(drinksInBars.name);
+      drinksInBar.forEach(drinksInBar => {
+        console.log(drinksInBar.name);
       });
-      mongoose.connection.close();
     });
   });
