@@ -26,19 +26,16 @@ const drinks = [
   {
     name: "Bloody Mary",
     ingredients: ["vodka", "tomato juice", "slice of lemon", "tabasco"],
-    bars: ["Cock", "Corazón", "De Diego"],
     placeOfOrigin: "USA"
   },
   {
     name: "Negroni",
     ingredients: ["gin", "martini rosso", "campari", "slice of orange"],
-    bars: ["Cock", "Corazón", "De Diego"],
     placeOfOrigin: "Italy"
   },
   {
     name: "Dry Martini",
     ingredients: ["gin", "vermouth", "twist of lemon", "an olive"],
-    bars: ["Cock", "Corazón", "De Diego"],
     placeOfOrigin: "USA"
   }
 ];
@@ -61,6 +58,11 @@ const bars = [
   }
 ];
 
+User.collection.drop();
+Bar.collection.drop();
+Drink.collection.drop();
+DrinksInBar.collection.drop();
+
 User.create(user, (err, user) => {
   if (err) {
     throw err;
@@ -69,23 +71,19 @@ User.create(user, (err, user) => {
 });
 
 Bar.create(bars)
-  .then(bars => {
-    Drink.create(drinks, (err, docs) => {
-      if (err) {
-        throw err;
-      }
-      drinks.forEach(drinks => {
-        console.log(drinks.name);
-      });
-    });
+  .then(createdBars => {
+    Drink.create(drinks)
+    .then(createdDrinks => {
+      let drinksInBar = []
+      createdBars.forEach((bar, i) => {
+        drinksInBar.push({
+          idBar: bar._id,
+          idDrink: createdDrinks[i]._id,
+          price: 5
+        })
+      })
+      console.log(drinksInBarqq)
+      DrinksInBar.create(drinksInBar)
+    })
   })
-  .then(drinksInBar => {
-    DrinksInBar.create(drinksInBar, (err, docs) => {
-      if (err) {
-        throw err;
-      }
-      drinksInBar.forEach(drinksInBar => {
-        console.log(drinksInBar.name);
-      });
-    });
-  });
+  .catch(err => console.log('Error al guardar'))
