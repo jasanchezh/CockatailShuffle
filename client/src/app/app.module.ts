@@ -8,12 +8,14 @@ import { SessionService } from '../services/session.service';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MapComponent } from './map/map.component';
+import { CatalogComponent } from './catalog/catalog.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '',  component: HomeComponent },
   { path: 'login',  component: LoginFormComponent },
-  { path: 'map', component: MapComponent }
+  { path: 'map', component: MapComponent },
+  { path: 'catalog', component: CatalogComponent },
 ];
 
 @NgModule({
@@ -21,7 +23,8 @@ const routes: Routes = [
     AppComponent,
     LoginFormComponent,
     HomeComponent,
-    MapComponent
+    MapComponent,
+    CatalogComponent
   ],
   imports: [
     BrowserModule,
