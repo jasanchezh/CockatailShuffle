@@ -3,7 +3,7 @@
     hola
   </div>
   <div class="col-md-4">
-    <form>
+    <form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
       <p>Selecciona los ingredientes de tu coctel:</p>
       <div>
         <input type="radio" id="contactChoice1" name="ron" value="ron">

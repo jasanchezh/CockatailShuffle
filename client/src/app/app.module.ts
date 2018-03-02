@@ -24,7 +24,8 @@ const routes: Routes = [
     LoginFormComponent,
     HomeComponent,
     MapComponent,
-    CatalogComponent
+    CatalogComponent,
+    FormsModule
   ],
   imports: [
     BrowserModule,
