@@ -11,7 +11,7 @@ import { MapComponent } from './map/map.component';
 import { CatalogComponent } from './catalog/catalog.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '',  component: HomeComponent },
   { path: 'login',  component: LoginFormComponent },
   { path: 'map', component: MapComponent },
@@ -24,8 +24,7 @@ const routes: Routes = [
     LoginFormComponent,
     HomeComponent,
     MapComponent,
-    CatalogComponent,
-    FormsModule
+    CatalogComponent
   ],
   imports: [
     BrowserModule,
