@@ -13,4 +13,9 @@ export class CatalogComponent implements OnInit {
   ngOnInit() {
   }
 
+  submitForm(myForm) {
+    if(myDrink.value == "ron") {
+      const src = "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201612/28/00118733302030____2__600x600.jpg";
+    }
+  }
 }

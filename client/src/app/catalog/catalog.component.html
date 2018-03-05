@@ -1,47 +1,11 @@
-<div class="container">
-  <div class="col-md-8">
-    hola
-  </div>
-  <div class="col-md-4">
-    <form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
-      <p>Selecciona los ingredientes de tu coctel:</p>
-      <div>
-        <input type="radio" id="contactChoice1" name="ron" value="ron">
-        <label for="contactChoice1">Ron</label>
-
-        <input type="radio" id="contactChoice2" name="vodka" value="vodka">
-        <label for="contactChoice2">Vodka</label>
-
-        <input type="radio" id="contactChoice3" name="ginebra" value="ginebra">
-        <label for="contactChoice3">Ginebra</label>
-      </div>
-    </form>
-    <form>
-      <div>
-        <input type="radio" id="contactChoice1" name="contact" value="email">
-        <label for="contactChoice1">Email</label>
-
-        <input type="radio" id="contactChoice2" name="contact" value="phone">
-        <label for="contactChoice2">Phone</label>
-
-        <input type="radio" id="contactChoice3" name="contact" value="mail">
-        <label for="contactChoice3">Mail</label>
-      </div>
-    </form>
-    <form>
-        <div>
-          <input type="radio" id="contactChoice1" name="contact" value="email">
-          <label for="contactChoice1">Email</label>
-  
-          <input type="radio" id="contactChoice2" name="contact" value="phone">
-          <label for="contactChoice2">Phone</label>
-  
-          <input type="radio" id="contactChoice3" name="contact" value="mail">
-          <label for="contactChoice3">Mail</label>
-        </div>
-      </form>
-    <div>
-      <button type="submit">Submit</button>
-    </div>
-  </div>
+<div class="combinations">
+<form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+  <input type="radio" name="ron" value="ron" [(ngModel)]="ron" #myDrink="ngModel">Ron
+  <input type="radio" name="vodka" value="vodka" [(ngModel)]="vodka" #myDrink="ngModel">Vodka
+  <input type="radio" name="ginebra" value="ginebra " [(ngModel)]="ginebra" #myDrink="ngModel">Ginebra  
+  <button type="submit"> Mezclar </button>
+</form> 
+</div>
+<div>
+  <img src="{{src}}" alt="">
 </div>
