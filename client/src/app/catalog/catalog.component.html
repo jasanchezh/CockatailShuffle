@@ -1,0 +1,11 @@
+<div class="combinations">
+  <form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+    <input type="radio" name="ron" value="ron" [(ngModel)]="ron" #myDrink="ngModel">Ron
+    <input type="radio" name="vodka" value="vodka" [(ngModel)]="vodka" #myDrink="ngModel">Vodka
+    <input type="radio" name="ginebra" value="ginebra " [(ngModel)]="ginebra" #myDrink="ngModel">Ginebra
+    <button type="submit"> Mezclar </button>
+  </form>
+</div>
+<div>
+  <a [routerLink]="['../map']">Mapa</a>
+</div>
