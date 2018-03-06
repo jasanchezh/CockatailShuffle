@@ -17,17 +17,20 @@ export class CatalogComponent implements OnInit {
   public second: string;
   public colaImg: string;
   public fantaImg: string;
-  public spriteImg: string;
+  public tonicaImg: string;
+  public gintonicImg: string;
+  public third: string;
 
   constructor() {
     this.ronImg = 'https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201612/28/00118733302030____2__600x600.jpg';
     this.vodkaImg = 'https://bodegasalianza.vteximg.com.br/arquivos/ids/157939-800-800/1804-1.jpg?v=636138051173200000';
     this.ginebraImg = 'https://s2.dia.es/medias/hb6/he4/9233199464478.jpg';
-    this.srcImg = 'http://az659704.vo.msecnd.net/v1/image/c_lpad,w_1500,h_1500/v1400603728/cocktail_bora_bora-1.png'; // this.ronImg;
-    this.base = '';
+    this.srcImg = 'https://goo.gl/LxSvNQ';
+    this.base = 'https://goo.gl/LxSvNQ'; // Imagen generica
     this.colaImg = 'https://goo.gl/BdE6fj';
     this.fantaImg = 'https://goo.gl/kfLnY9';
-    this.spriteImg = 'https://goo.gl/1CKAKy';
+    this.tonicaImg = 'https://goo.gl/62xK63';
+    this.gintonicImg = 'https://goo.gl/YqtVfa';
   }
 
   ngOnInit() {
@@ -54,12 +57,18 @@ export class CatalogComponent implements OnInit {
     if (this.second === 'fanta') {
       this.srcImg = this.fantaImg;
     }
-    if (this.second === 'sprite') {
-      this.srcImg = this.spriteImg;
+    if (this.second === 'tonica') {
+      this.srcImg = this.tonicaImg;
     }
   }
 
   cocktail() {
+    console.log(this.second);
+    if (this.base === 'ginebra' && this.second === 'tonica' && this.third === 'hielo') {
+      this.srcImg = this.gintonicImg;
+    } else {
+      this.srcImg = this.srcImg;
+    }
 
   }
 }
