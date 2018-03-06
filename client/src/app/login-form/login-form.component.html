@@ -1,21 +1,30 @@
-<h1> Authentication Sample </h1>
-<div *ngIf="!session.getUser()">
-  <form>
-    <h2> Login or Signup </h2>
-    <label> Username </label>
-    <input type="text" [(ngModel)]="username" name="username"/>
-    <br>
-    <label> Password </label>
-    <input type="password" [(ngModel)]="password" name="password"/>
-    <div>
-      <button (click)="login()"> login </button>
-      <button (click)="signup()"> signup </button>
-    </div>
-  </form>
-  <p *ngIf="error" class="error"> {{ error }} </p>
-</div>
+<div class="container-fluid">
+  <div *ngIf="!session.getUser()">
+    <form class="form-horizontal">
+      <h2> Login or Signup </h2>
+      <div class="form-group">
+        <div class="col-sm-4">
+          <input class="form-control" id="inputEmail3" placeholder="Username" type="text" [(ngModel)]="username" name="username" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-4">
+          <input type="password" class="form-control" id="inputPassword3" placeholder="Password" [(ngModel)]="password" name="password"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-default" (click)="login()"> Log In </button>
+          <button type="submit" class="btn btn-default" (click)="login()"> Sign Up </button>
+        </div>
+      </div>
+    </form>
+    <p *ngIf="error" class="error"> {{ error }} </p>
+  </div>
 
-<div *ngIf="session.getUser()">
-  <pre> {{ session.getUser() | json }} </pre>
-  <button (click)="logout()"> Logout </button>
+  <div *ngIf="session.getUser()">
+    <pre> {{ session.getUser() | json }} </pre>
+    <button (click)="logout()"> Logout </button>
+  </div>
 </div>

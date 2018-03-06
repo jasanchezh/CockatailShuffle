@@ -1,7 +1,11 @@
-<iframe
+<!-- <iframe
   width="600"
   height="450"
   frameborder="0" style="border:0"
   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB-1i1biq9ogArWHLKQPf8q_JriZlqf_Z8
     &q=Madrid,Spain" allowfullscreen>
-</iframe>
+</iframe> -->
+
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
