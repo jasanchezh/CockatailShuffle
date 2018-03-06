@@ -1,11 +1,16 @@
 <div class="combinations">
-  <form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
-    <input type="radio" name="ron" value="ron" [(ngModel)]="ron" #myDrink="ngModel">Ron
-    <input type="radio" name="vodka" value="vodka" [(ngModel)]="vodka" #myDrink="ngModel">Vodka
-    <input type="radio" name="ginebra" value="ginebra " [(ngModel)]="ginebra" #myDrink="ngModel">Ginebra
-    <button type="submit"> Mezclar </button>
-  </form>
+  <div>
+    <input type="radio" name="drink" [(ngModel)]="drink" value="ron" (click)="mix()">Ron
+    <input type="radio" name="drink" [(ngModel)]="drink" value="vodka" (click)="mix()">Vodka
+    <input type="radio" name="drink" [(ngModel)]="drink" value="ginebra" (click)="mix()">Ginebra
+  </div>
 </div>
+<div class="drinks">
+  <img src="{{srcImg}}" alt="{{srcImg}}">
+</div>
+<!-- <div *ngIf(myForm.value==="ron")
+   <img src="{{src}}" alt="{{src}}">
+</div> -->
 <div>
   <a [routerLink]="['../map']">Mapa</a>
 </div>
