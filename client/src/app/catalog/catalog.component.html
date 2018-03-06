@@ -1,8 +1,18 @@
 <div class="combinations">
   <div>
-    <input type="radio" name="drink" [(ngModel)]="drink" value="ron" (click)="mix()">Ron
-    <input type="radio" name="drink" [(ngModel)]="drink" value="vodka" (click)="mix()">Vodka
-    <input type="radio" name="drink" [(ngModel)]="drink" value="ginebra" (click)="mix()">Ginebra
+    <input type="radio" name="base" [(ngModel)]="base" value="ron" (click)="mix()">Ron
+    <input type="radio" name="base" [(ngModel)]="base" value="vodka" (click)="mix()">Vodka
+    <input type="radio" name="base" [(ngModel)]="base" value="ginebra" (click)="mix()">Ginebra
+  </div>
+  <div>
+    <input type="radio" name="second" [(ngModel)]="second" value="cola" (click)="secondMix()">Cola
+    <input type="radio" name="second" [(ngModel)]="second" value="fanta" (click)="secondMix()">Fanta
+    <input type="radio" name="second" [(ngModel)]="second" value="sprite" (click)="secondMix()">Sprite
+  </div>
+  <div>
+    <input type="radio" name="third" [(ngModel)]="third" value="agua" (click)="mix()">Agua
+    <input type="radio" name="third" [(ngModel)]="third" value="hielo" (click)="mix()">Hielo
+    <input type="radio" name="third" [(ngModel)]="third" value="hieloP" (click)="mix()">Hielo Picado
   </div>
 </div>
 <div class="drinks">
