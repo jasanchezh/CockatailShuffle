@@ -12,15 +12,13 @@
   <div>
     <input type="radio" name="third" [(ngModel)]="third" value="agua" (click)="cocktail()">Agua
     <input type="radio" name="third" [(ngModel)]="third" value="hielo" (click)="cocktail()">Hielo
-    <input type="radio" name="third" [(ngModel)]="third" value="hieloP" (click)="cocktail()">Hielo Picado
+    <input type="radio" name="third" [(ngModel)]="third" value="azucar" (click)="cocktail()">Azucar
   </div>
 </div>
 <div class="drinks">
   <img src="{{srcImg}}" alt="{{srcImg}}">
 </div>
-<!-- <div *ngIf(myForm.value==="ron")
-   <img src="{{src}}" alt="{{src}}">
-</div> -->
+<p>{{name}}</p>
 <div>
   <a [routerLink]="['../map']">Mapa</a>
 </div>

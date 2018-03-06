@@ -20,6 +20,9 @@ export class CatalogComponent implements OnInit {
   public tonicaImg: string;
   public gintonicImg: string;
   public third: string;
+  public cosmoImg: string;
+  public cubaLibreImg: string;
+  public name: string;
 
   constructor() {
     this.ronImg = 'https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201612/28/00118733302030____2__600x600.jpg';
@@ -31,6 +34,9 @@ export class CatalogComponent implements OnInit {
     this.fantaImg = 'https://goo.gl/kfLnY9';
     this.tonicaImg = 'https://goo.gl/62xK63';
     this.gintonicImg = 'https://goo.gl/YqtVfa';
+    this.cosmoImg = 'https://goo.gl/3nJJqy';
+    this.cubaLibreImg = 'https://goo.gl/2qmXEh';
+    this.name = '';
   }
 
   ngOnInit() {
@@ -66,9 +72,15 @@ export class CatalogComponent implements OnInit {
     console.log(this.second);
     if (this.base === 'ginebra' && this.second === 'tonica' && this.third === 'hielo') {
       this.srcImg = this.gintonicImg;
-    } else {
-      this.srcImg = this.srcImg;
+      this.name = 'Gintonic';
     }
-
-  }
+    if (this.base === 'vodka' && this.second === 'fanta' && this.third === 'azucar') {
+      this.srcImg = this.cosmoImg;
+      this.name = 'Cosmopolitan';
+    }
+    if (this.base === 'ron' && this.second === 'cola' && this.third === 'hielo') {
+      this.srcImg = this.cubaLibreImg;
+      this.name = 'Cuba libre';
+    }
+}
 }
