@@ -27,7 +27,7 @@ const routes: Routes = [
     LoginFormComponent,
     HomeComponent,
     MapComponent,
-    CatalogComponent
+    CatalogComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,4 +42,4 @@ const routes: Routes = [
   providers: [SessionService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
