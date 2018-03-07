@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MapComponent } from './map/map.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { AgmCoreModule } from '@agm/core';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,13 +25,16 @@ const routes: Routes = [
     LoginFormComponent,
     HomeComponent,
     MapComponent,
-    CatalogComponent
+    CatalogComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDUZoN1KMIzVbwvqxDnrZHJu_Gz5306Qaw'
+    })
   ],
   providers: [SessionService],
   bootstrap: [AppComponent]
