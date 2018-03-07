@@ -6,12 +6,13 @@ const User = require("../models/User");
 const Drink = require("../models/Drink");
 const DrinksInBar = require("../models/DrinksInBar");
 const Bar = require("../models/bar");
+const mongodb = "mongodb://karlsanm:IronHack35%@ds251988.mlab.com:51988/cocktail-shuffle";
 
 const salt = bcrypt.genSaltSync(bcryptSalt);
 const password = "ironhack";
 const encryptedPass = bcrypt.hashSync(password, salt);
 
-mongoose.connect("mongodb://localhost/cocktails")
+mongoose.connect("mongodb://karlsanm:IronHack35%@ds251988.mlab.com:51988/cocktail-shuffle")
     .then(() => console.log("Conectado"))
     .catch(e => console.log(e));
 
