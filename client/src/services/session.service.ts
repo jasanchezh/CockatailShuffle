@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
 import { EventEmitter } from 'protractor';
+import { environment }  from '../environments/environment';
 
 interface User {
   username: string;
@@ -13,7 +14,7 @@ interface User {
 @Injectable()
 export class SessionService {
 
-  BASEURL: string = 'http://localhost:3000';
+  BASEURL: string = 'environment.baseurl';
   options: object = {withCredentials: true};
   constructor(private http: Http) {
     this.isLoggedIn().subscribe();
