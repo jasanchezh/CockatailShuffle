@@ -26,7 +26,7 @@ export class CatalogComponent implements OnInit {
     this.ronImg =
       "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201612/28/00118733302030____2__600x600.jpg";
     this.vodkaImg =
-      "https://bodegasalianza.vteximg.com.br/arquivos/ids/157939-800-800/1804-1.jpg?v=636138051173200000";
+      "https://bodegasalianza.vteximg.com.br/arquivos/ids/157939-800-800/1804-1.jpg";
     this.ginebraImg = "https://s2.dia.es/medias/hb6/he4/9233199464478.jpg";
     this.srcImg = "https://goo.gl/LxSvNQ";
     this.base = "https://goo.gl/LxSvNQ"; // Imagen generica
@@ -41,31 +41,31 @@ export class CatalogComponent implements OnInit {
 
   ngOnInit() {}
 
-  // mix() {
-  //   console.log(this.base);
-  //   if (this.base === "ron") {
-  //     this.srcImg = this.ronImg;
-  //   }
-  //   if (this.base === "vodka") {
-  //     this.srcImg = this.vodkaImg;
-  //   }
-  //   if (this.base === "ginebra") {
-  //     this.srcImg = this.ginebraImg;
-  //   }
-  // }
+  mix() {
+    console.log(this.base);
+    if (this.base === "ron") {
+      this.srcImg = this.ronImg;
+    }
+    if (this.base === "vodka") {
+      this.srcImg = this.vodkaImg;
+    }
+    if (this.base === "ginebra") {
+      this.srcImg = this.ginebraImg;
+    }
+  }
 
-  // secondMix() {
-  //   console.log(this.second);
-  //   if (this.second === "cola") {
-  //     this.srcImg = this.colaImg;
-  //   }
-  //   if (this.second === "fanta") {
-  //     this.srcImg = this.fantaImg;
-  //   }
-  //   if (this.second === "tonica") {
-  //     this.srcImg = this.tonicaImg;
-  //   }
-  // }
+  secondMix() {
+    console.log(this.second);
+    if (this.second === "cola") {
+      this.srcImg = this.colaImg;
+    }
+    if (this.second === "fanta") {
+      this.srcImg = this.fantaImg;
+    }
+    if (this.second === "tonica") {
+      this.srcImg = this.tonicaImg;
+    }
+  }
 
   cocktail() {
     // console.log(this.second);
