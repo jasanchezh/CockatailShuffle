@@ -12,19 +12,19 @@
           <label class="radio-inline">
             <input type="radio" name="base" [(ngModel)]="base" value="ginebra" (click)="mix()">Gin
           </label>
-          <label class="radio-inline">
-              <input type="radio" name="base" [(ngModel)]="base" value="ginebra" (click)="mix()">Whiskey
-            </label>
         </div>
         <div>
           <label class="radio-inline">
-            <input type="radio" name="second" [(ngModel)]="second" value="cola" (click)="secondMix()">Coca-Cola
+            <input type="radio" name="second" [(ngModel)]="second" value="cola" (click)="secondMix()">Cola
           </label>
           <label class="radio-inline">
             <input type="radio" name="second" [(ngModel)]="second" value="fanta" (click)="secondMix()">Fanta
           </label>
           <label class="radio-inline">
             <input type="radio" name="second" [(ngModel)]="second" value="tonica" (click)="secondMix()">Tonic
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="second" [(ngModel)]="second" value="campari" (click)="secondMix()">Campari
           </label>
         </div>
         <div>
@@ -37,17 +37,22 @@
           <label class="radio-inline">
             <input type="radio" name="third" [(ngModel)]="third" value="azucar" (click)="cocktail()">Sugar
           </label>
-          <div>
-              <button type="button" class="btn btn-default" [routerLink]="['../map']">Mapa</button>
-          </div>
+          <label class="radio-inline">
+            <input type="radio" name="third" [(ngModel)]="third" value="martiniRosso" (click)="cocktail()">Martini
+          </label>
+        </div>
+        <div id="map-button">
+          <button type="button" class="btn btn-default" [routerLink]="['../map']">map with the best places to have a cocktail in Madrid</button>
         </div>
       </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-4">
       <div class="drinks">
         <img src="{{srcImg}}" alt="{{srcImg}}">
       </div>
-      <p>{{name}}</p>
+    </div>
+    <div class="col-md-4">
+      <p id="nombre-bebida">{{name}}</p>
     </div>
   </div>
 </div>

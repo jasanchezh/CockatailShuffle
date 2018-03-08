@@ -22,23 +22,28 @@ export class CatalogComponent implements OnInit {
   public cubaLibreImg: string;
   public name: string;
   public errorImg: string;
+  public campariImg: string;
+  public negroni: string;
 
   constructor() {
     this.ronImg =
-      "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201612/28/00118733302030____2__600x600.jpg";
+      "http://justliquor.com.au/544-large_default/bacardi-oakheart-700ml.jpg";
     this.vodkaImg =
       "https://bodegasalianza.vteximg.com.br/arquivos/ids/157939-800-800/1804-1.jpg";
-    this.ginebraImg = "https://s2.dia.es/medias/hb6/he4/9233199464478.jpg";
+    this.ginebraImg = "https://www.danmurphys.com.au/media/DM/Product/308x385/903465_0_9999_med_v1_m56577569854527289.png";
     this.srcImg = "https://goo.gl/LxSvNQ";
     this.base = "https://goo.gl/LxSvNQ"; // Imagen generica
     this.colaImg = "https://goo.gl/BdE6fj";
     this.fantaImg = "https://goo.gl/kfLnY9";
-    this.tonicaImg = "https://goo.gl/62xK63";
-    this.gintonicImg = "https://goo.gl/YqtVfa";
+    this.tonicaImg = "https://www.danmurphys.com.au/media/DM/Product/308x385/841115_0_9999_med_v1_m56577569855123888.png";
+    this.gintonicImg = "http://www.rives.es/img/cocktails/spanish-gintonic.png";
     this.cosmoImg = "https://goo.gl/3nJJqy";
-    this.cubaLibreImg = "https://goo.gl/2qmXEh";
+    this.cubaLibreImg = "https://www.brugal-rum.com/wp-content/uploads/2016/03/single-cuba-libre.png";
     this.name = "";
     this.errorImg = "https://cdn0.iconfinder.com/data/icons/shift-free/32/Error-512.png";
+    this.campariImg = "http://www.camparigroup.com/sites/default/files/brand/campari_1.png";
+    this.negroni = "https://1.bp.blogspot.com/-IldHWi_mUl0/UJza_FCw4BI/AAAAAAAAATg/mXhswiOkQVI/s1600/negroni.png"
+
   }
 
   ngOnInit() {}
@@ -67,17 +72,19 @@ export class CatalogComponent implements OnInit {
     if (this.second === "tonica") {
       this.srcImg = this.tonicaImg;
     }
+    if (this.second === "campari") {
+      this.srcImg = this.campariImg;
+    }
   }
 
   cocktail() {
-    // console.log(this.second);
     if (
       this.base === "ginebra" &&
       this.second === "tonica" &&
       this.third === "hielo"
     ) {
       this.srcImg = this.gintonicImg;
-      this.name = "Gintonic";
+      this.name = "Gin Tonic";
     }
     if (
       this.base === "vodka" &&
@@ -102,6 +109,14 @@ export class CatalogComponent implements OnInit {
     ) {
       this.srcImg = this.errorImg;
       this.name = "ERROR";
+    }
+    if (
+      this.base === "ginebra" &&
+      this.second === "campari" &&
+      this.third === "martiniRosso"
+    ) {
+      this.srcImg = this.negroni;
+      this.name = "Negroni";
     }
   }
 }
