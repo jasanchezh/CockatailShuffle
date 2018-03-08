@@ -4,24 +4,27 @@
       <div class="col-md-4">
         <div>
           <label class="radio-inline">
-            <input id="inlineRadio1" type="radio" name="base" [(ngModel)]="base" value="ron" (click)="mix()">Ron
+            <input type="radio" name="base" [(ngModel)]="base" value="ron" (click)="mix()">Rum
           </label>
           <label class="radio-inline">
-            <input id="inlineRadio2" type="radio" name="base" [(ngModel)]="base" value="vodka" (click)="mix()">Vodka
+            <input type="radio" name="base" [(ngModel)]="base" value="vodka" (click)="mix()">Vodka
           </label>
           <label class="radio-inline">
-            <input id="inlineRadio3" type="radio" name="base" [(ngModel)]="base" value="ginebra" (click)="mix()">Ginebra
+            <input type="radio" name="base" [(ngModel)]="base" value="ginebra" (click)="mix()">Gin
           </label>
+          <label class="radio-inline">
+              <input type="radio" name="base" [(ngModel)]="base" value="ginebra" (click)="mix()">Whiskey
+            </label>
         </div>
         <div>
           <label class="radio-inline">
-            <input type="radio" name="second" [(ngModel)]="second" value="cola" (click)="secondMix()">Cola
+            <input type="radio" name="second" [(ngModel)]="second" value="cola" (click)="secondMix()">Coca-Cola
           </label>
           <label class="radio-inline">
             <input type="radio" name="second" [(ngModel)]="second" value="fanta" (click)="secondMix()">Fanta
           </label>
           <label class="radio-inline">
-            <input type="radio" name="second" [(ngModel)]="second" value="tonica" (click)="secondMix()">Tonica
+            <input type="radio" name="second" [(ngModel)]="second" value="tonica" (click)="secondMix()">Tonic
           </label>
         </div>
         <div>
@@ -29,10 +32,10 @@
             <input type="radio" name="third" [(ngModel)]="third" value="agua" (click)="cocktail()">Agua
           </label>
           <label class="radio-inline">
-            <input type="radio" name="third" [(ngModel)]="third" value="hielo" (click)="cocktail()">Hielo
+            <input type="radio" name="third" [(ngModel)]="third" value="hielo" (click)="cocktail()">Ice
           </label>
           <label class="radio-inline">
-            <input type="radio" name="third" [(ngModel)]="third" value="azucar" (click)="cocktail()">Azucar
+            <input type="radio" name="third" [(ngModel)]="third" value="azucar" (click)="cocktail()">Sugar
           </label>
           <div>
               <button type="button" class="btn btn-default" [routerLink]="['../map']">Mapa</button>

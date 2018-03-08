@@ -21,6 +21,7 @@ export class CatalogComponent implements OnInit {
   public cosmoImg: string;
   public cubaLibreImg: string;
   public name: string;
+  public errorImg: string;
 
   constructor() {
     this.ronImg =
@@ -37,6 +38,7 @@ export class CatalogComponent implements OnInit {
     this.cosmoImg = "https://goo.gl/3nJJqy";
     this.cubaLibreImg = "https://goo.gl/2qmXEh";
     this.name = "";
+    this.errorImg = "https://cdn0.iconfinder.com/data/icons/shift-free/32/Error-512.png";
   }
 
   ngOnInit() {}
@@ -98,8 +100,8 @@ export class CatalogComponent implements OnInit {
       this.second === "cola" &&
       this.third === "agua"
     ) {
-      this.srcImg = this.cubaLibreImg;
-      this.name = "error";
+      this.srcImg = this.errorImg;
+      this.name = "ERROR";
     }
   }
 }
