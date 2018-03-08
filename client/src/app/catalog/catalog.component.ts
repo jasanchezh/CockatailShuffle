@@ -30,14 +30,14 @@ export class CatalogComponent implements OnInit {
       "http://justliquor.com.au/544-large_default/bacardi-oakheart-700ml.jpg";
     this.vodkaImg =
       "https://bodegasalianza.vteximg.com.br/arquivos/ids/157939-800-800/1804-1.jpg";
-    this.ginebraImg = "https://www.danmurphys.com.au/media/DM/Product/308x385/903465_0_9999_med_v1_m56577569854527289.png";
-    this.srcImg = "https://goo.gl/LxSvNQ";
-    this.base = "https://goo.gl/LxSvNQ"; // Imagen generica
-    this.colaImg = "https://goo.gl/BdE6fj";
+    this.ginebraImg = "http://www.albertfsmanduca.com.mt/assets/images/brands_bottles/spirits/gin/seagrams_bottle.png";
+    this.srcImg = "http://az659704.vo.msecnd.net/v1/image/c_lpad,w_1500,h_1500/v1400603728/cocktail_bora_bora-1.png";
+    this.base = "http://az659704.vo.msecnd.net/v1/image/c_lpad,w_1500,h_1500/v1400603728/cocktail_bora_bora-1.png"; // Imagen generica
+    this.colaImg = "http://www.zandh.co.uk/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/c/o/coca_cola_glass.png";
     this.fantaImg = "https://goo.gl/kfLnY9";
     this.tonicaImg = "https://www.danmurphys.com.au/media/DM/Product/308x385/841115_0_9999_med_v1_m56577569855123888.png";
     this.gintonicImg = "http://www.rives.es/img/cocktails/spanish-gintonic.png";
-    this.cosmoImg = "https://goo.gl/3nJJqy";
+    this.cosmoImg = "http://www.caraibos.com/sites/default/files/upload/cocktails-caraibos/cosmopolitan.png";
     this.cubaLibreImg = "https://www.brugal-rum.com/wp-content/uploads/2016/03/single-cuba-libre.png";
     this.name = "";
     this.errorImg = "https://cdn0.iconfinder.com/data/icons/shift-free/32/Error-512.png";
