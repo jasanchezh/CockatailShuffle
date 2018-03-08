@@ -1,12 +1,18 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-8">
-            <a [routerLink]="['catalog']">Empezar</a>
+        <div class="cover-content col-md-6">
+            <img src="http://www.farrieranddraper.ie/wp-content/themes/farrierdraper/images/drinksImage.png" class="img-responsive" alt="cover image">
         </div>
-        <div class="col-md-4">
-            <a [routerLink]="['login']">Log In</a>
-            <a [routerLink]="['signup']">Sign Up</a>
+        <div class="cover-content col-md-6">
+            <button type="button" class="btn btn-default btn-lg" [routerLink]="['catalog']">start mixing your cocktail</button>
+            <br/>
+            <br/>
+            <p class="lead"><b>thirsty?</b> <br/> click on the above button<br/> to start mixing your<br/> favorite cocktail<br/><br/> <span>🥃 🍸 🍹</span></p>
         </div>
+        <!-- <div class="col-md-4">
+            <button type="button" class="btn btn-default" [routerLink]="['login']">Log In</button>
+            <button type="button" class="btn btn-default" [routerLink]="['login']">Sign Up</button>
+        </div> -->
     </div>
 </div>
 <!-- <a [routerLink]="['home']">Home </a>

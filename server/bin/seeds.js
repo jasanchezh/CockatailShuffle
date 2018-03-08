@@ -27,7 +27,8 @@ const drinks = [
   {
     name: "Bloody Mary",
     ingredients: ["vodka", "tomato juice", "slice of lemon", "tabasco"],
-    placeOfOrigin: "USA"
+    placeOfOrigin: "USA",
+    url
   },
   {
     name: "Negroni",

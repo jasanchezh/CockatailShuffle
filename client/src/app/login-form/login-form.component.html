@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div *ngIf="!session.getUser()">
     <form class="form-horizontal">
-      <h2> Login or Signup </h2>
+      <h2> Log in / Sign up </h2>
       <div class="form-group">
         <div class="col-sm-4">
           <input class="form-control" id="inputEmail3" placeholder="Username" type="text" [(ngModel)]="username" name="username" />
@@ -16,7 +16,7 @@
       <div class="form-group">
         <div class="col-sm-4">
           <button type="submit" class="btn btn-default" (click)="login()"> Log In </button>
-          <button type="submit" class="btn btn-default" (click)="signup()"> Sign Up </button>
+          <button type="submit" class="btn btn-default" (click)="login()"> Sign Up </button>
         </div>
       </div>
     </form>

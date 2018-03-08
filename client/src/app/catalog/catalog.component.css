@@ -1,8 +1,15 @@
-.combinations{
+/* .combinations{
     width: 40%;
-    border: 1px solid black;
     margin-left: 40%;
-}
+} */
 img{
     width: 300px;
+}
+
+label {
+    width: 90px;
+}
+
+.container-fluid .row {
+    margin: 50px 0;
 }

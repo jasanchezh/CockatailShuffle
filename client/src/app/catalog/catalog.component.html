@@ -1,24 +1,50 @@
-<div class="combinations">
-  <div>
-    <input type="radio" name="base" [(ngModel)]="base" value="ron" (click)="mix()">Ron
-    <input type="radio" name="base" [(ngModel)]="base" value="vodka" (click)="mix()">Vodka
-    <input type="radio" name="base" [(ngModel)]="base" value="ginebra" (click)="mix()">Ginebra
+<div class="container-fluid">
+  <div class="row">
+    <div class="combinations">
+      <div class="col-md-4">
+        <div>
+          <label class="radio-inline">
+            <input id="inlineRadio1" type="radio" name="base" [(ngModel)]="base" value="ron" (click)="mix()">Ron
+          </label>
+          <label class="radio-inline">
+            <input id="inlineRadio2" type="radio" name="base" [(ngModel)]="base" value="vodka" (click)="mix()">Vodka
+          </label>
+          <label class="radio-inline">
+            <input id="inlineRadio3" type="radio" name="base" [(ngModel)]="base" value="ginebra" (click)="mix()">Ginebra
+          </label>
+        </div>
+        <div>
+          <label class="radio-inline">
+            <input type="radio" name="second" [(ngModel)]="second" value="cola" (click)="secondMix()">Cola
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="second" [(ngModel)]="second" value="fanta" (click)="secondMix()">Fanta
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="second" [(ngModel)]="second" value="tonica" (click)="secondMix()">Tonica
+          </label>
+        </div>
+        <div>
+          <label class="radio-inline">
+            <input type="radio" name="third" [(ngModel)]="third" value="agua" (click)="cocktail()">Agua
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="third" [(ngModel)]="third" value="hielo" (click)="cocktail()">Hielo
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="third" [(ngModel)]="third" value="azucar" (click)="cocktail()">Azucar
+          </label>
+          <div>
+              <button type="button" class="btn btn-default" [routerLink]="['../map']">Mapa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="drinks">
+        <img src="{{srcImg}}" alt="{{srcImg}}">
+      </div>
+      <p>{{name}}</p>
+    </div>
   </div>
-  <div>
-    <input type="radio" name="second" [(ngModel)]="second" value="cola" (click)="secondMix()">Cola
-    <input type="radio" name="second" [(ngModel)]="second" value="fanta" (click)="secondMix()">Fanta
-    <input type="radio" name="second" [(ngModel)]="second" value="tonica" (click)="secondMix()">Tonica
-  </div>
-  <div>
-    <input type="radio" name="third" [(ngModel)]="third" value="agua" (click)="cocktail()">Agua
-    <input type="radio" name="third" [(ngModel)]="third" value="hielo" (click)="cocktail()">Hielo
-    <input type="radio" name="third" [(ngModel)]="third" value="azucar" (click)="cocktail()">Azucar
-  </div>
-</div>
-<div class="drinks">
-  <img src="{{srcImg}}" alt="{{srcImg}}">
-</div>
-<p>{{name}}</p>
-<div>
-  <a [routerLink]="['../map']">Mapa</a>
 </div>
