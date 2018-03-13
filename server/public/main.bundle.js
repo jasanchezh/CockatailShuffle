@@ -174,7 +174,7 @@ var CatalogComponent = /** @class */ (function () {
         this.ronImg =
             "http://justliquor.com.au/544-large_default/bacardi-oakheart-700ml.jpg";
         this.vodkaImg =
-            "https://bodegasalianza.vteximg.com.br/arquivos/ids/157939-800-800/1804-1.jpg";
+            "http://pluspng.com/img-png/vodka-png-absolut-vodka-logo-transparent-png-stickpng-720.png";
         this.ginebraImg = "http://www.albertfsmanduca.com.mt/assets/images/brands_bottles/spirits/gin/seagrams_bottle.png";
         this.srcImg = "http://az659704.vo.msecnd.net/v1/image/c_lpad,w_1500,h_1500/v1400603728/cocktail_bora_bora-1.png";
         this.base = "http://az659704.vo.msecnd.net/v1/image/c_lpad,w_1500,h_1500/v1400603728/cocktail_bora_bora-1.png"; // Imagen generica
